@@ -1,0 +1,276 @@
+#desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('Fotos-Video/Dipsous.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-bottom: 60px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ---------- Taskbar ---------- */
+#taskbar {
+  position: fixed; /* Zorgt ervoor dat de taskbar altijd onderaan blijft */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Zorgt ervoor dat de taskbar de volledige breedte van de pagina inneemt */
+  height: 50px; /* Consistente hoogte */
+  background: #222; /* Achtergrondkleur */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Apps in het midden */
+  padding: 0 15px;
+  z-index: 1000; /* Zorgt ervoor dat de taskbar boven andere elementen blijft */
+}
+
+#taskbar-right {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#taskbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px; /* Zorgt ervoor dat dit gedeelte de beschikbare ruimte opvult */
+}
+
+
+.Taskbar-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Taskbar-button {
+  background: none;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Windows-button {
+  background: none;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Windows-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+/* ---------- Desktop Buttons ---------- */
+
+#desktopButtons-leftSide {
+  display: flex;          /* Zorgt dat de inhoud flexibel gepositioneerd wordt */
+  justify-content: left;  /* Plaatst inhoud links */
+  align-items: left;      /* Uitlijning (hier minder effectief bij flex) */
+  margin-left: 10px;      /* Kleine afstand van de rand */
+}
+
+#DesktopLeft {
+  width: 50px;            /* Breedte van container */
+  height: 50px;           /* Hoogte (wordt overschreven door inhoud) */
+  margin-left: 30px;      
+  margin-top: 200px;      /* Duwt knoppen naar beneden */
+  border-radius: 50%;
+  position: absolute;     /* Vrij positioneren t.o.v. pagina */
+  top: -15px;             
+  left: 15px;             /* Afstand van linkerrand */
+  display: flex;
+  flex-direction: column; /* Knoppen onder elkaar */
+  justify-content: center;
+  align-items: center;
+}
+
+.Desktop-button {
+  display: flex;
+  background: none;       /* Geen knop-achtergrond */
+  border: none;           /* Geen rand */
+  cursor: pointer;        /* Handje bij hover */
+  margin: 20px;           /* Ruimte tussen knoppen */
+  height: 65px;           /* Hoogte van de knop */
+  border-radius: 50%;     /* Maakt knop rond */
+  justify-content: center;
+}
+
+.Desktop-button img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ---------- Clock ---------- */
+#clock {
+  color: white;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#Clock-right {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- Windows Popups ---------- */
+
+/* Window frame */
+body > div[style*="position: fixed"][style*="background: white"] {
+    background: #c0c0c0 !important;
+    border: 2px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    padding: 20px !important;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+/* Title bar */
+body > div[style*="position: fixed"] > div:first-child {
+    background: linear-gradient(to right, #000080, #1084d0) !important;
+    color: white !important;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding: 4px 6px !important;
+    margin: -20px -20px 10px -20px !important;
+    text-align: center;
+}
+
+/* Close button */
+body > div[style*="position: fixed"] button.close-btn {
+    background: #c0c0c0 !important;
+    border: 2px solid #000;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
+    border-radius: 0;
+    color: black !important;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+}
+
+body > div[style*="position: fixed"] button.close-btn:active {
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Content area */
+.popup-content {
+    background: #1e5bd8; /* blauw achtergrond */
+    color: white; /* witte tekst */
+    padding: 15px !important;
+    line-height: 1.6 !important;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+}
+
+/* Resize hoekje */
+body > div[style*="position: fixed"] > div[style*="cursor: nwse-resize"] {
+    background: repeating-linear-gradient(
+        135deg,
+        #808080,
+        #808080 2px,
+        #c0c0c0 2px,
+        #c0c0c0 4px
+    ) !important;
+    border: none !important;
+}
+
+/* ============================= */
+/* KNOPPEN FIX – Lange/Korte Versie */
+/* ============================= */
+.popup-content button {
+    display: inline-flex !important;  /* flex zodat tekst gecentreerd is */
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap !important;   /* geen tekstwrap */
+    min-width: 100px;                 /* knop past zich aan tekst aan */
+    padding: 6px 12px !important;     /* ruimte rond tekst */
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+
+    background: #1e5bd8 !important;   /* blauwe knop */
+    color: white !important;          /* witte tekst */
+    border: 2px solid #000 !important;
+    border-top-color: #fff !important;
+    border-left-color: #fff !important;
+    border-right-color: #404040 !important;
+    border-bottom-color: #404040 !important;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup-content button:active {
+    border-top-color: #404040 !important;
+    border-left-color: #404040 !important;
+    border-right-color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+
+/* Titels in popup */
+.popup-content h3 {
+    white-space: normal !important;
+    margin-top: 12px;
+    font-size: 16px !important;
+}
+
+/* Paragrafen */
+.popup-content p {
+    margin-bottom: 10px;
+    font-size: 14px !important;
+}
+
+/* Voorkomt dat link / knop tekst uit elkaar valt */
+.popup-content a {
+    white-space: nowrap !important;
+    display: inline-block;
+    min-width: max-content;
+}
+
+/* ❗ Zorg dat font consistent blijft en niet springt bij resize */
+.popup-content h3,
+.popup-content p,
+.popup-content button {
+    font-size: 14px !important;
+}
