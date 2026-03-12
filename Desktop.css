@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%; /* Zorgt ervoor dat de taskbar de volledige breedte van de pagina inneemt */
   height: 50px; /* Consistente hoogte */
-  background: #222; /* Achtergrondkleur */
+  background: #c0c0c0; /* Achtergrondkleur */
   display: flex;
   align-items: center;
   justify-content: center; /* Apps in het midden */

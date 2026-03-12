@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maps</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Maps.css">
+  <script src="Maps.js" defer></script>
+</head>
+
+  <!-- De enige echte taskbar -->
+  <div id="taskbar">
+    <!-- Apps in het midden -->
+    <div id="taskbar-center">
+      <button class="Windows-button" onclick="window.location.href='index.html'">
+        <img src="Fotos-Video/Windows.jpg" alt="Home">
+      </button>
+      <button class="Taskbar-button" onclick="window.location.href='Discord/Aboutme.html'">
+        <img src="../Fotos-Video/Discord.jpg" alt="Discord">
+      </button>
+      <button class="Taskbar-button" onclick="window.location.href='Unity/Unity.html'">
+        <img src="../Fotos-Video/Unity.jpg" alt="Projecten">
+      </button>
+      <button class="Taskbar-button" onclick="window.location.href='Github/Github.html'">
+        <img src="../Fotos-Video/Github.jpg" alt="Contact">
+      </button>
+       <button class="Taskbar-button" onclick="window.location.href='Maps/Maps.html'">
+        <img src="../Fotos-Video/Maps.jpg" alt="Maps">
+      </button>
+    </div>
+
+    <!-- Klok rechts -->
+    <div id="Clock-right">
+      <div id="clock"></div>
+    </div>
+  </div>
+
+  <!-- Info-knop -->
+  <button id="info-button">
+    <img src="../Jpg/swedenNetherlands.png" alt="Info" />
+  </button>
+
+  <!-- Uitschuifpaneel -->
+  <div id="info-panel">
+    <div class="close-btn">×</div>
+    <h2>Informatie</h2>
+    <h3>The Offline Connection</h3>
+    <div class="media-section">
+      <img src="Zweden/GroepsFotoZweden.png" alt="Foto">
+      <video controls src="Zweden/OflineConection.mp4"></video>
+      <p>The offline connection is a project where students from Sweden and Amsterdam work together to build a game.</p>
+    </div>
+  </div>
+</body>
+</html>

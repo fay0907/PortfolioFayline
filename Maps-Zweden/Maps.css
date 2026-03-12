@@ -1,0 +1,56 @@
+/* ---------- Taskbar ---------- */
+#taskbar {
+  position: fixed; /* Zorgt ervoor dat de taskbar altijd onderaan blijft */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Zorgt ervoor dat de taskbar de volledige breedte van de pagina inneemt */
+  height: 50px; /* Consistente hoogte */
+  background: #c0c0c0; /* Achtergrondkleur */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Apps in het midden */
+  padding: 0 15px;
+  z-index: 1000; /* Zorgt ervoor dat de taskbar boven andere elementen blijft */
+}
+
+#taskbar-right {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#taskbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px; /* Zorgt ervoor dat dit gedeelte de beschikbare ruimte opvult */
+}
+
+.Taskbar-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Taskbar-button {
+  background: none;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Windows-button {
+  background: none;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Windows-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
