@@ -1,3 +1,39 @@
+/* ---------- Version Selector ---------- */
+const video = document.getElementById("BackgroundVideo");
+const button = document.getElementById("toggleVideo");
+
+
+/* ---------- Video Controls ---------- */
+let videoEnabled = true;
+
+video.addEventListener("ended", () => {
+  video.classList.add("videoHidden");
+
+  setTimeout(() => {
+    if (videoEnabled) {
+      video.classList.remove("videoHidden");
+      video.currentTime = 0;
+      video.play();
+    }
+  }, 3000);
+});
+
+button.addEventListener("click", () => {
+
+  videoEnabled = !videoEnabled;
+
+  if (videoEnabled) {
+    button.textContent = "Video uit";
+    video.play();
+    video.classList.remove("videoHidden");
+  } else {
+    button.textContent = "Video aan";
+    video.pause();
+    video.classList.add("videoHidden");
+  }
+
+});
+
 /* ---------- Clock ---------- */
 
 function updateClock() {
@@ -11,6 +47,7 @@ function updateClock() {
     setInterval(updateClock, 1000);
     updateClock();
 
+/* ---------- Popups ---------- */
 
 // Array om alle open popups bij te houden
 const openPopups = [];

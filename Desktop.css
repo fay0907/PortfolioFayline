@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('Fotos-Video/Dipsous.jpg');
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,6 +19,62 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+}
+/* ---------- Reset ---------- */
+#reset-Btn {
+  background: #ff4c4c; /* opvallende rode kleur */
+  color: white;
+  border: 2px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#reset-Btn:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* ---------- Achtergrondvideo ---------- */
+.background {
+  position: fixed;
+  inset: 0;
+  background-image: url("Fotos-Video/GroepsFotoZweden.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  z-index: -2;
+}
+
+#BackgroundVideo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain; /* hele foto zichtbaar */
+  background: black;   /* zwarte randen als verhouding anders is */
+
+  z-index: -1;
+}
+
+.videoHidden {
+  opacity: 0;
+}
+
+#toggleVideo {
+  position: fixed;
+  left: 1650px;
+  padding: 10px;
 }
 
 /* ---------- Taskbar ---------- */

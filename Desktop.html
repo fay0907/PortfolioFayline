@@ -10,6 +10,13 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Achtergrondafbeelding/Fideo -->
+   <div class="background"></div>
+    <video id="BackgroundVideo" autoplay muted playsinline preload="auto">
+      <source src="Fotos-Video/ZwedenFullGameplay.mp4" type="video/mp4">
+    </video>
+      
+
     <!-- Apps op de desktop -->
   <div id="desktopButtons-leftSide">
     <div id="DesktopLeft">
@@ -22,15 +29,13 @@
       <button class="Desktop-button" onclick="window.location.href='Github/Github.html'">
         <img src="Fotos-Video/Github.jpg" alt="Contact">
       </button>
-      <button class="Desktop-button" onclick="window.location.href='Maps/Maps.html'">
+      <button class="Desktop-button" onclick="window.location.href='Maps-Zweden/Maps.html'">
         <img src="Fotos-Video/Maps.jpg" alt="Maps">
       </button>
   </div>
   <div id="desktop">
     <section id="hero" class="window active">
       <div class="container">
-        <h2>Welkom op mijn Portfolio</h2>
-        <p>Look out this is not your own taskbar \/ </p>
       </div>
     </section>
   </div>
@@ -39,7 +44,7 @@
   <div id="taskbar">
     <!-- Apps in het midden -->
     <div id="taskbar-center">
-      <button class="Windows-button" onclick="window.location.href='index.html'">
+      <button class="Windows-button" onclick="window.location.href='Desktop.html'">
         <img src="Fotos-Video/Windows.jpg" alt="Home">
       </button>
       <button class="Taskbar-button" onclick="window.location.href='Discord/Aboutme.html'">
@@ -51,9 +56,13 @@
       <button class="Taskbar-button" onclick="window.location.href='Github/Github.html'">
         <img src="Fotos-Video/Github.jpg" alt="Contact">
       </button>
-       <button class="Taskbar-button" onclick="window.location.href='Maps/Maps.html'">
+       <button class="Taskbar-button" onclick="window.location.href='Maps-Zweden/Maps.html'">
         <img src="Fotos-Video/Maps.jpg" alt="Maps">
       </button>
+      <!-- Video toggle-knop -->
+      <button id="toggleVideo">Video uit</button>
+      <!-- Reset-knop -->
+      <button id="reset-Btn">Reset Alles</button>
     </div>
 
     <!-- Klok rechts -->
