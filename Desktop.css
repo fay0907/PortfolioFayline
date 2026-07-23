@@ -164,7 +164,7 @@ body {
   background: none;       /* Geen knop-achtergrond */
   border: none;           /* Geen rand */
   cursor: pointer;        /* Handje bij hover */
-  margin: 20px;           /* Ruimte tussen knoppen */
+  margin: 40px;           /* Ruimte tussen knoppen */
   height: 65px;           /* Hoogte van de knop */
   border-radius: 50%;     /* Maakt knop rond */
   justify-content: center;
